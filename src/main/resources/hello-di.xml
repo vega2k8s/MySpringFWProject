@@ -8,4 +8,7 @@
 	<!-- StringPrinter 클래스를 Spring Bean으로 설정 -->
 	<bean id="strPrinter" class="myspring.di.xml.StringPrinter" />
 	
+	<!-- ConsolePrinter 클래스를 Spring Bean으로 설정 -->
+	<bean id="conPrinter" class="myspring.di.xml.ConsolePrinter" />
+	
 </beans>
