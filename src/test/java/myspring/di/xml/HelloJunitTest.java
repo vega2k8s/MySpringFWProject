@@ -1,10 +1,10 @@
 package myspring.di.xml;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
+//Assertions 에 포함된 모든 static method를 import 한다.
 import static org.junit.jupiter.api.Assertions.*;
 
 public class HelloJunitTest {
