@@ -9,7 +9,7 @@ public class HelloJunitTest {
 	@Test
 	void helloBean() {
 		//1. Container 객체생성
-		ApplicationContext context = new GenericXmlApplicationContext("");
+		ApplicationContext context = new GenericXmlApplicationContext("classpath:hello-di.xml");
 	}
 	
 }
