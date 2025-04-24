@@ -11,9 +11,9 @@
 	<!-- ConsolePrinter 클래스를 Spring Bean으로 설정 -->
 	<bean id="conPrinter" class="myspring.di.xml.ConsolePrinter" />
 	
-	<!-- Hello 클래스를  Spring Bean으로 설정-->
+	<!-- Hello 클래스를  Spring Bean으로 설정 Setter Injection 방식 -->
 	<bean id="hello" class="myspring.di.xml.Hello">
 		<property name="name" value="스프링" />
-		
+		<property name="printer" ref="strPrinter" />
 	</bean>
 </beans>
