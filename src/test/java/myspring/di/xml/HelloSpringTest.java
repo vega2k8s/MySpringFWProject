@@ -15,8 +15,13 @@ public class HelloSpringTest {
 	@Autowired
 	Hello hello;
 	
+	@Autowired
+	Printer printer;
+	
 	@Test
 	void helloSpringBean() {
 		assertEquals("Hello 스프링", hello.sayHello());
+		hello.print();
+		assertEquals("Hello 스프링", printer.toString());
 	}
 }
