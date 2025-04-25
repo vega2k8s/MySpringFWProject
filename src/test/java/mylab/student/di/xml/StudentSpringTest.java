@@ -1,6 +1,6 @@
 package mylab.student.di.xml;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,5 +18,11 @@ public class StudentSpringTest {
 	@Test
 	void testCourse() {
 		assertNotNull(course);
+		assertEquals("Java Programming", course.getCourseName());
+		assertEquals(3, course.getStudents().size());
+		assertEquals("emma", course.getStudents().get(0));
+		
+		System.out.println(course.getAverageScore());
+		
 	}
 }
