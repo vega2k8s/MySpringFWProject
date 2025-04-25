@@ -18,7 +18,6 @@ public class HelloJunitTest {
 		context = new GenericXmlApplicationContext("classpath:hello-di.xml");		
 	}
 	
-
 	@Test
 	void helloBean() {
 		//2. Container 객체가 생성한 Hello Spring Bean을 요청하기
