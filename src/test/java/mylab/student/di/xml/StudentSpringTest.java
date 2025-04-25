@@ -20,7 +20,12 @@ public class StudentSpringTest {
 		assertNotNull(course);
 		assertEquals("Java Programming", course.getCourseName());
 		assertEquals(3, course.getStudents().size());
-		assertEquals("emma", course.getStudents().get(0));
+		/*
+		 * course.getStudents() => List<Student>  학생목록
+		 * course.getStudents().get(0) => Student 학생
+		 * course.getStudents().get(0).getName() => String 학생의 이름
+		 */
+		assertEquals("emma", course.getStudents().get(0).getName());
 		
 		System.out.println(course.getAverageScore());
 		
