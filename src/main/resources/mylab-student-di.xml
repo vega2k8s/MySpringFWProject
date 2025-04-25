@@ -13,9 +13,9 @@
 	</bean>
 
 	<bean id="john" class="mylab.student.di.xml.Student">
-		<property name="id" value="S002" />
-		<property name="name" value="존" />
-		<property name="score" value="75" />
+		<constructor-arg name="id" value="S002" />
+		<constructor-arg name="name" value="존" />
+		<constructor-arg name="score" value="75" />
 	</bean>
 	
 	<bean id="jane" class="mylab.student.di.xml.Student">
@@ -23,5 +23,6 @@
 		<property name="name" value="제인" />
 		<property name="score" value="85" />
 	</bean>
+	
 	
 </beans>
