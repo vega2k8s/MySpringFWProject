@@ -18,7 +18,9 @@ public class HelloConSpringTest {
 	
 	@Test
 	void helloCons() {
-		System.out.println(hello.sayHello());
+		//System.out.println(hello.sayHello());
+		assertEquals("Hello 생성자", hello.sayHello());
+		hello.print();
 	}
 	
 }
