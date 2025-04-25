@@ -39,5 +39,7 @@
 	
 	<!-- GradeService 클래스를 Spring Bean으로 설정 -->
 	<bean id="gradeService" class="mylab.student.di.xml.GradeService">
+		<property name="course" ref="javaCourse" />
 	</bean>
+	
 </beans>
