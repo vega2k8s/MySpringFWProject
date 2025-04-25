@@ -24,5 +24,13 @@
 		<property name="score" value="85" />
 	</bean>
 	
+	<!-- Course 클래스를 Spring Bean으로 설정 -->
+	<bean id="javaCourse" class="mylab.student.di.xml.Course">
+		<property name="courseId" value="C001" />
+		<property name="courseName" value="Java Programming" />
+		<property name="">
+		</property>
+		
+	</bean>
 	
 </beans>
