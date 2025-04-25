@@ -16,12 +16,12 @@ public class HelloSpringTest {
 	Hello hello;
 	
 	@Autowired
-	Printer printer;
+	Printer strPrinter;
 	
 	@Test
 	void helloSpringBean() {
 		assertEquals("Hello 스프링", hello.sayHello());
 		hello.print();
-		assertEquals("Hello 스프링", printer.toString());
+		assertEquals("Hello 스프링", strPrinter.toString());
 	}
 }
