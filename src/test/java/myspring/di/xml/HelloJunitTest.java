@@ -13,7 +13,7 @@ public class HelloJunitTest {
 	void helloBean() {
 		//1. Container 객체생성
 		ApplicationContext context = new GenericXmlApplicationContext("classpath:hello-di.xml");
-		//2. Container 객체가 생성한 Spring Bean을 요청하기
+		//2. Container 객체가 생성한 Hello Spring Bean을 요청하기
 		Hello helloById = (Hello)context.getBean("hello");
 		Hello helloByType = context.getBean("hello", Hello.class);
 		
@@ -23,6 +23,11 @@ public class HelloJunitTest {
 		
 		//값 비교
 		assertEquals("Hello 스프링", helloById.sayHello());
+		
+		helloById.print();
+		
+		//Container 객체가 생성한 StringPrinter 스프링빈을 요청하기
+		Printer printer = context.getBean("strPrinter", Printer.class);
 		
 	}
 	
