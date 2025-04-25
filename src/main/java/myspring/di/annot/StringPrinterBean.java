@@ -1,5 +1,8 @@
 package myspring.di.annot;
 
+import org.springframework.stereotype.Component;
+
+@Component("stringPrinter")
 public class StringPrinterBean implements PrinterBean {
 	private StringBuffer buffer = new StringBuffer();
 	
