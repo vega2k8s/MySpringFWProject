@@ -23,6 +23,12 @@ public class HelloConSpringTest {
 		hello.print();
 		
 		assertEquals(3, hello.getNames().size());
+		assertEquals("스프링클라우드", hello.getNames().get(2));
+		
+		//hello.getNames() ==> List<String>
+		for(String name: hello.getNames()) {
+			System.out.println(name);
+		}
 	}
 	
 }
