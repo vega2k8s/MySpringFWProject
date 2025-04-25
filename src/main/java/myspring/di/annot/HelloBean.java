@@ -19,7 +19,8 @@ public class HelloBean {
 	@Resource(name = "${myPrinter}")
 	PrinterBean printer;
 	
-	@Value("${names.list.of.strings}")
+	//@Value("${names.list.of.strings}")
+	@Value("#{'${names.list.of.strings}'.split(',')}") 
 	List<String> names;
 
 	public HelloBean() {
