@@ -25,9 +25,9 @@ public class StudentSpringTest {
 		 * course.getStudents().get(0) => Student 학생
 		 * course.getStudents().get(0).getName() => String 학생의 이름
 		 */
-		assertEquals("emma", course.getStudents().get(0).getName());
+		assertEquals("엠마", course.getStudents().get(0).getName());
 		
 		System.out.println(course.getAverageScore());
-		
+		assertEquals(83.333, course.getAverageScore(),0.001);
 	}
 }
