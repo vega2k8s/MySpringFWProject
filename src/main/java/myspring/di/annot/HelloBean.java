@@ -19,6 +19,7 @@ public class HelloBean {
 	@Resource(name = "${myPrinter}")
 	PrinterBean printer;
 	
+	@Value("${names.list.of.strings}")
 	List<String> names;
 
 	public HelloBean() {
