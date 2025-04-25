@@ -5,5 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+	<!-- Student 클래스를 Spring Bean으로 설정 -->
+	<bean id="emma" class="mylab.student.di.xml.Student">
+		<property name="id" value="S001" />
+		<property name="name" value="엠마" />
+		<property name="score" value="90" />
+	</bean>
+	
 </beans>
