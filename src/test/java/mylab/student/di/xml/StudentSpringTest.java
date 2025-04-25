@@ -20,6 +20,14 @@ public class StudentSpringTest {
 	
 	@Resource(name = "gradeService")
 	GradeService service;
+	
+	@Test
+	void testService() {
+		assertNotNull(service);
+		assertEquals("C001", service.getCourse().getCourseId());
+		assertEquals("A", service.calculateGrade("S001"));
+	}
+	
 		
 	@Test @Disabled
 	void testCourse() {
