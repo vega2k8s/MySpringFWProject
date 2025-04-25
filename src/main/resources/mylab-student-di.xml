@@ -28,9 +28,15 @@
 	<bean id="javaCourse" class="mylab.student.di.xml.Course">
 		<property name="courseId" value="C001" />
 		<property name="courseName" value="Java Programming" />
-		<property name="">
-		</property>
-		
+		<property name="students">
+			<list>
+				<ref bean="emma" />
+				<ref bean="john" />
+				<ref bean="jane" />
+			</list>
+		</property>		
 	</bean>
+	
+	
 	
 </beans>
