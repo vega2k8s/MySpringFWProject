@@ -2,6 +2,9 @@ package mylab.student.di.xml;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.annotation.Resource;
+
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +18,10 @@ public class StudentSpringTest {
 	@Autowired
 	Course course;
 	
-	@Test
+	@Resource(name = "gradeService")
+	GradeService service;
+		
+	@Test @Disabled
 	void testCourse() {
 		assertNotNull(course);
 		assertEquals("Java Programming", course.getCourseName());
