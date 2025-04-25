@@ -16,4 +16,11 @@
 		<property name="name" value="스프링" />
 		<property name="printer" ref="strPrinter" />
 	</bean>
+	
+	<!-- Hello 클래스를  Spring Bean으로 설정 Constructor Injection 방식 -->
+	<bean id="helloC" class="myspring.di.xml.Hello">
+		<constructor-arg index="0" value="생성자" />
+		<constructor-arg index="1" ref="conPrinter" />
+	</bean>
+	
 </beans>
