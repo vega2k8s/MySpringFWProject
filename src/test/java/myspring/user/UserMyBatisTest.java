@@ -1,6 +1,7 @@
 package myspring.user;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
@@ -21,6 +22,9 @@ public class UserMyBatisTest {
 	void connection() {
 		try {
 			Connection connection = dataSource.getConnection();
+			DatabaseMetaData metaData = connection.getMetaData();
+			System.out.println("DB URL = " + metaData.getURL());
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
