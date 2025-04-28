@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- log4j2 설정 -->
+	<settings>
+         <setting name="defaultStatementTimeout" value="3"/> 
+         <setting name="logImpl" value="LOG4J2"/>
+    </settings>
+    
+	<typeAliases>
+		<typeAlias alias="User" type="myspring.user.vo.UserVO" />
+		<typeAlias alias="Student" type="myspring.student.vo.StudentVO" />
+		<typeAlias alias="Dept" type="myspring.student.vo.DeptVO" />
+		<typeAlias alias="Course" type="myspring.student.vo.CourseVO" />
+		<typeAlias alias="CourseStatus" type="myspring.student.vo.CourseStatusVO" />
+	</typeAliases>
+
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
