@@ -23,14 +23,16 @@ public class UserServiceTest {
         assertNotNull(userService);
         
         // UserRepository 확인
+        //userService.getUserRepository() => UserRepository
         assertNotNull(userService.getUserRepository());
+        //userService.getUserRepository().getDbType() ==> String 타입은 값은 MySQL
         assertEquals("MySQL", userService.getUserRepository().getDbType());
         
         // SecurityService(어노테이션으로 주입) 확인
         assertNotNull(userService.getSecurityService());
         
         // 기능 테스트
-        assertTrue(userService.registerUser("user1", "홍길동", "password123"));
-        assertFalse(userService.registerUser("user2", "김철수", ""));
+        assertTrue(userService.registerUser("user1", "홍길동", "password123")); //true
+        assertFalse(userService.registerUser("user2", "김철수", "")); //false
     }
 }
