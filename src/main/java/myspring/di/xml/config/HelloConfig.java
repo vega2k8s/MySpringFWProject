@@ -36,6 +36,7 @@ public class HelloConfig {
 		//hello.setName("스프링")  env.getProperty("myName1") == "스프링"
 		hello.setName(env.getProperty("myName1")); //myName1=스프링
 		hello.setPrinter(stringPrinter());
+		hello.setNames(namesList());
 		return hello;
 	}
 	
