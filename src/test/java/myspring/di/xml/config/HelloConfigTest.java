@@ -8,14 +8,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import myspring.di.xml.Hello;
+
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = HelloConfig.class )
 public class HelloConfigTest {
 	@Autowired
 	List<String> namesList;
 	
+	@Autowired
+	Hello hello;
+	
 	@Test
-	void helloConfig() {
+	void testHelloConfig() {
+		
+	}
+	
+	
+	
+	@Test
+	void testNameList() {
 		for (String name : namesList) {
 			System.out.println(name);
 		}
