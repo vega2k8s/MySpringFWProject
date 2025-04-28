@@ -24,7 +24,8 @@ public class UserMyBatisTest {
 			Connection connection = dataSource.getConnection();
 			DatabaseMetaData metaData = connection.getMetaData();
 			System.out.println("DB URL = " + metaData.getURL());
-			
+			System.out.println("DB Username = " + metaData.getUserName());
+			System.out.println("DB Vendor Name = " + metaData.getDatabaseProductName());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
