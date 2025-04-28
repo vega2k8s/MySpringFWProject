@@ -32,7 +32,7 @@ public class HelloConfig {
 	
 	@Bean
 	public Hello hello() {
-		Hello hello = new Hello(); //alt + shift + l(엘)
+		Hello hello = new Hello();
 		//hello.setName("스프링")  env.getProperty("myName1") == "스프링"
 		hello.setName(env.getProperty("myName1")); //myName1=스프링
 		hello.setPrinter(stringPrinter());
@@ -42,7 +42,10 @@ public class HelloConfig {
 	
 	@Bean
 	public List<String> namesList() {
-		return Arrays.asList("Java","Spring","Kotlin");
+		String names = env.getProperty("names.list.of.strings");
+//		String[] strArray = names.split(",");
+//		return Arrays.asList(strArray);
+		return Arrays.asList(names.split(","));
 	}
 	
 }
