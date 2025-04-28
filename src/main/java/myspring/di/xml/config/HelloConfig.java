@@ -20,7 +20,7 @@ public class HelloConfig {
 	@Autowired
 	private Environment env;
 	
-	@Bean
+	@Bean("strPrinter")
 	public Printer stringPrinter() {
 		return new StringPrinter();
 	}

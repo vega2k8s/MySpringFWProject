@@ -24,7 +24,7 @@ public class HelloConfigTest {
 	@Autowired
 	Hello hello;
 	
-	@Resource(name = "stringPrinter")
+	@Resource(name = "strPrinter")
 	Printer printer;
 	
 	
