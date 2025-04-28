@@ -12,5 +12,8 @@
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
 		p:driverClassName="${db.driverClass}"
 		p:jdbcUrl="${db.url}" 
+		p:username="${db.username}"
+		p:password="${db.password}"
 	/>
+	
 </beans>
