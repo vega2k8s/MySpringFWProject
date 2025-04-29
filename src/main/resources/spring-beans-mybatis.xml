@@ -30,4 +30,8 @@
 		</property>
 	</bean>
 	
+	<!-- SqlSession 설정 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
 </beans>
