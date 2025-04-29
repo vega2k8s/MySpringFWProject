@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Select;
 
 import myspring.user.vo.UserVO;
 
-@MyMapper
 public interface UserMapper {
 	//@Select("select * from users where userid=#{id}")
 	//UserVO selectUserById(@Param("id") String id);
