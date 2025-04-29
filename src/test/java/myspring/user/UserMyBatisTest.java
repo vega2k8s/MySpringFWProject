@@ -20,6 +20,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import myspring.user.dao.mapper.UserMapper;
+import myspring.user.service.UserService;
 import myspring.user.vo.UserVO;
 
 @ExtendWith(SpringExtension.class)
@@ -39,7 +40,17 @@ public class UserMyBatisTest {
 	@Autowired
 	UserMapper userMapper;
 	
+	@Autowired
+	UserService userService;
+	
 	@Test
+	void service() {
+		userService.insertUser(new UserVO("boot", "아임부트", "남", "부산"));
+		UserVO user = userService.getUser("boot");
+		logger.debug(user);
+	}
+	
+	@Test @Disabled
 	void mapper() {
 		UserVO user = userMapper.selectUserById("gildong");
 		logger.debug(user);
