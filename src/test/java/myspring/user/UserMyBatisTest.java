@@ -53,8 +53,12 @@ public class UserMyBatisTest {
 				logger.debug(user);				
 			}
 		});
+		
+		//Consumer 추상메서드 void accept(T t)
 		//.forEach(Consumer)에서 Consumer를 Lambda Expression (람다식)으로 선언하는 방식
-		userList.forEach(user1 -> logger.debug(user1));
+		userList.forEach(user1 -> System.out.println(user1));
+		//.forEach(Consumer)에서 Consumer를 Method Reference 으로 선언하는 방식
+		userList.forEach(System.out::println);
 	}
 	
 	
