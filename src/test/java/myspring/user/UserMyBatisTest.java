@@ -37,7 +37,7 @@ public class UserMyBatisTest {
 	
 	@Test
 	void userMapper() {
-		UserVO user = sqlSession.selectOne("userNS.selectUserById ", "dooly");
+		UserVO user = sqlSession.selectOne("userNS.selectUserById", "dooly");
 		logger.debug(user);
 		
 	}
