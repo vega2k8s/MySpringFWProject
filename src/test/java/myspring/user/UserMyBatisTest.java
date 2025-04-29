@@ -37,6 +37,8 @@ public class UserMyBatisTest {
 		System.out.println(sessionFactory.getClass().getName());
 		UserVO user = sqlSession.selectOne("userNS.selectUserById", "dooly");
 		logger.debug(user);
+		
+		sqlSession.selectList("userNS.selectUserList").forEach(action);  //List<UserVO>
 	}
 	
 	

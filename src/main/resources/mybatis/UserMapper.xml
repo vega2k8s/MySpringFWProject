@@ -5,7 +5,7 @@
 <mapper namespace="userNS">
 
 	<select id="selectUserById" parameterType="string" resultType="User">
-		select * from users where userid=#{value}
+		select * from users where userid=#{myuserid}
 	</select>
 
 	<select id="selectUserList" resultType="User">
