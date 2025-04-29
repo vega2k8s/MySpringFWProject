@@ -28,7 +28,7 @@ public class UserMyBatisTest {
 	
 	@Test
 	void sqlSession() {
-		System.out.println(sessionFactory.getConfiguration().getDatabaseId());
+		System.out.println(sessionFactory.getClass().getName());
 	}
 	
 	
