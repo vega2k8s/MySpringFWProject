@@ -16,4 +16,15 @@
 		p:password="${db.password}"
 	/>
 	
+	<!-- SqlSessionFactoryBean 설정 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:UserMapper.xml</value>
+				<value>classpath:StudentMapper.xml</value>
+			</list>
+		</property>
+	</bean>
 </beans>
