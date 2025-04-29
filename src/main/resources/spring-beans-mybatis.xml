@@ -25,8 +25,9 @@
 		<!-- setMapperLocations(Resource... mapperLocations) SQL문이 포함된 mapper xml -->
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:*Mapper.xml</value>
+				<value>classpath:mybatis/*Mapper.xml</value>
 			</list>
 		</property>
 	</bean>
+	
 </beans>
