@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,9 +27,13 @@ public class UserMyBatisTest {
 	@Autowired
 	SqlSessionFactory sessionFactory;
 	
+	@Autowired
+	SqlSession sqlSession;
+	
 	@Test
 	void sqlSession() {
 		System.out.println(sessionFactory.getClass().getName());
+		sqlSession.selectOne("userNS.selectUserById", "dooly");
 	}
 	
 	

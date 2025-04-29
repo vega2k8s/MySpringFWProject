@@ -30,7 +30,7 @@
 		</property>
 	</bean>
 	
-	<!-- SqlSession 설정 -->
+	<!-- SqlSession 설정 consturctor injection 방식만 가능함 (기본생성자가 없기 때문에)-->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
