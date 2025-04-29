@@ -42,9 +42,18 @@ public class UserMyBatisTest {
 		
 		//Anonymous Inner Class (익명 내부 클래스)
 		List<UserVO> userList = sqlSession.selectList("userNS.selectUserList");  //List<UserVO>
+		//기존의 For Loop
 		for (UserVO userVO : userList) {
 			logger.debug(userVO);
 		}
+		//.forEach(Consumer)에서 Consumer를 Anonymous Inner class 형태로 선언하는 방식
+		userList.forEach(new Consumer<UserVO>() {
+			@Override
+			public void accept(UserVO user) {
+				logger.debug(user);				
+			}
+		});
+		//.forEach(Consumer)에서 Consumer를 Lambda Expression (람다식)으로 선언하는 방식
 		
 	}
 	
