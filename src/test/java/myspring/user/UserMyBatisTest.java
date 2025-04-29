@@ -16,6 +16,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import myspring.user.vo.UserVO;
+
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = "classpath:spring-beans-mybatis.xml")
 public class UserMyBatisTest {
@@ -33,7 +35,8 @@ public class UserMyBatisTest {
 	@Test
 	void sqlSession() {
 		System.out.println(sessionFactory.getClass().getName());
-		sqlSession.selectOne("userNS.selectUserById", "dooly");
+		UserVO user = sqlSession.selectOne("userNS.selectUserById", "dooly");
+		logger.debug(user);
 	}
 	
 	
