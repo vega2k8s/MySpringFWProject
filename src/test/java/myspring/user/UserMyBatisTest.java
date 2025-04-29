@@ -54,7 +54,7 @@ public class UserMyBatisTest {
 			}
 		});
 		//.forEach(Consumer)에서 Consumer를 Lambda Expression (람다식)으로 선언하는 방식
-		
+		userList.forEach(user1 -> logger.debug(user1));
 	}
 	
 	
