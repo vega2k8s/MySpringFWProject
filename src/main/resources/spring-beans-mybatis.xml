@@ -18,12 +18,14 @@
 	
 	<!-- SqlSessionFactoryBean 설정 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!-- setDataSource(DataSource source) -->
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:SqlMapConfig.xml" />
+		<!-- setConfigLocation(Resource configLocation) MyBatis config xml-->
+		<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+		<!-- setMapperLocations(Resource... mapperLocations) SQL문이 포함된 mapper xml -->
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:UserMapper.xml</value>
-				<value>classpath:StudentMapper.xml</value>
+				<value>classpath:*Mapper.xml</value>
 			</list>
 		</property>
 	</bean>
